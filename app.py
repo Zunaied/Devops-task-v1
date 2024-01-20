@@ -4,6 +4,7 @@ import datetime
 import requests
 
 app = Flask(__name__)
+WEATHER_API_KEY2=api_key
 
 WEATHER_API_KEY = '8be6c8be24e1343291686eca79950e3b'
 WEATHER_API_URL = f'http://api.openweathermap.org/data/2.5/weather?q=Dhaka&appid={WEATHER_API_KEY}'
