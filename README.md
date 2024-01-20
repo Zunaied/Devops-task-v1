@@ -42,6 +42,12 @@ The application has been containerized using Docker. The Dockerfile used for con
    - The deployed application uses the Docker image from Docker Hub with the specified version.
 
    - Docker Compose ensures a clean and robust deployment by stopping the existing containers, releasing ports, and then starting the new containers.
+4. **GitHub Webhook Integration:**
+
+- Integrate a webhook in the GitHub repository settings that triggers Jenkins on each new commit.
+
+- This ensures an automated and streamlined CI/CD workflow, initiating the pipeline as soon as changes are pushed to the repository.
+
    
 
 
