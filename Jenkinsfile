@@ -30,20 +30,20 @@ pipeline {
             }
         }
 
-        // stage("Deploy") {
-        //     steps {
-        //         echo "Deploying the container"
-        //         sh "docker-compose down && docker-compose up -d"
-        //     }
-        // }
-         stage('Deploy to Kubernetes') {
+        stage("Deploy") {
             steps {
-                script {
-                    sh "kubectl apply -f k8s/secret.yml --kubeconfig=${KUBECONFIG}"
-                    sh "kubectl apply -f k8s/deployment.yml --kubeconfig=${KUBECONFIG}"
-                    sh "kubectl apply -f k8s/service.yml --kubeconfig=${KUBECONFIG}"
-                }
-                }
+                echo "Deploying the container"
+                sh "docker-compose down && docker-compose up -d"
+            }
+        }
+        //  stage('Deploy to Kubernetes') {
+        //     steps {
+        //         script {
+        //             sh "kubectl apply -f k8s/secret.yml --kubeconfig=${KUBECONFIG}"
+        //             sh "kubectl apply -f k8s/deployment.yml --kubeconfig=${KUBECONFIG}"
+        //             sh "kubectl apply -f k8s/service.yml --kubeconfig=${KUBECONFIG}"
+        //         }
+        //         }
             }
         }
     }
