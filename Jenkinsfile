@@ -43,7 +43,8 @@ pipeline {
                     sh "kubectl apply -f k8s/deployment.yml --kubeconfig=${KUBECONFIG}"
                     sh "kubectl apply -f k8s/service.yml --kubeconfig=${KUBECONFIG}"
                 }
+                }
             }
         }
     }
-}
+
