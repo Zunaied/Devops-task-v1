@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+     environment {
+        KUBECONFIG = credentials('KUBECONFIG')
+    }
+
     stages {
         stage("Clone Code") {
             steps {
@@ -39,9 +43,9 @@ pipeline {
          stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    sh "kubectl apply -f k8s/secret.yml --kubeconfig=${KUBECONFIG}"
-                    sh "kubectl apply -f k8s/deployment.yml --kubeconfig=${KUBECONFIG}"
-                    sh "kubectl apply -f k8s/service.yml --kubeconfig=${KUBECONFIG}"
+                    sh "kubectl apply -f /var/lib/jenkins/workspace/check/k8s-manifest/secret.yml --kubeconfig=${KUBECONFIG}"
+                    sh "kubectl apply -f /var/lib/jenkins/workspace/check/k8s-manifest/deployment.yml --kubeconfig=${KUBECONFIG}"
+                    sh "kubectl apply -f /var/lib/jenkins/workspace/check/k8s-manifest/service.yml --kubeconfig=${KUBECONFIG}"
                 }
                 }
             }
