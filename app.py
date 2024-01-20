@@ -30,13 +30,13 @@ def fetch_weather_data():
     try:
         weather_response = requests.get(WEATHER_API_URL)
         weather_data = weather_response.json()
-
-        temperature = weather_data['main']['temp']
+        temperature_kelvin = weather_data['main']['temp']
+        temperature_celsius = round(temperature_kelvin - 273.15, 2)
         temp_unit = 'C'  
 
         return {
             "dhaka": {
-                "temperature": temperature,
+                "temperature": temperature_celsius,
                 "temp_unit": temp_unit
             }
         }
@@ -45,4 +45,4 @@ def fetch_weather_data():
         return {"error": "Unable to fetch weather data"}
 
 if __name__ == '__main__':
-    app.run( host='0.0.0.0',debug=True, port=5500)
+    app.run( debug=True, port=5500)
