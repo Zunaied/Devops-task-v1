@@ -21,7 +21,7 @@ pipeline {
                 echo "Pushing the image to Docker Hub"
                 script {
                     withCredentials([usernamePassword(credentialsId: "docker-hub-cred", passwordVariable: "dockerHubPass", usernameVariable: "dockerHubUser")]) {
-                        def imageName = "${env.dockerHubUser}/api:v2"
+                        def imageName = "${env.dockerHubUser}/api:v3"
                         sh "docker tag api $imageName"
                         sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
                         sh "docker push $imageName"
