@@ -1,6 +1,6 @@
 version : "3.3"
 services :
   web :
-     image : zunaied/api:latest
+     image : zunaied/api:v1
      ports :
          - "5500:5500"
