@@ -4,16 +4,11 @@
 ## API Creation using OpenWeather API
 This application, implemented in [app.py](./app.py), collects data from the OpenWeather API using an API key and provides responses to the following endpoints:
 
-- `/api/hello`: Returns data from OpenWeather.
-- `/api/health`: Health check API endpoint.
+## Endpoints
+   - `/api/hello`: Returns data from OpenWeather.
+   - `/api/health`: Health check API endpoint.
 
 The application runs on port 5500.
-
-
-## Endpoints
-
-- `/api/hello`: Description of this endpoint.
-- `/health`: Description of health check endpoint.
 
 ## Containerize the application using docker
 The application has been containerized using Docker. The Dockerfile used for containerization can be found at [Dockerfile](./Dockerfile). The Dockerfile is based on the `python:3.9-slim` image. It copies all the necessary files into the container and installs the required dependency packages.
@@ -42,6 +37,12 @@ The application has been containerized using Docker. The Dockerfile used for con
    - The deployed application uses the Docker image from Docker Hub with the specified version.
 
    - Docker Compose ensures a clean and robust deployment by stopping the existing containers, releasing ports, and then starting the new containers.
+4. **GitHub Webhook Integration:**
+
+   - Integrate a webhook in the GitHub repository settings that triggers Jenkins on each new commit.
+
+   - This ensures an automated and streamlined CI/CD workflow, initiating the pipeline as soon as changes are pushed to the repository.
+
    
 
 
