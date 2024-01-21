@@ -10,9 +10,9 @@ This application, implemented in [app.py](./app.py), collects data from the Open
  
 ## Endpoints
    - `/api/hello`: Returns data from OpenWeather.
-   ![api/hello](https://github.com/Zunaied/Devops-task-v1/blob/main/images/Screenshot%202024-01-21%20171510.png)
+   - ![api/hello](https://github.com/Zunaied/Devops-task-v1/blob/main/images/Screenshot%202024-01-21%20171510.png)
    - `/api/health`: Health check API endpoint.
-   ![api/health](https://github.com/Zunaied/Devops-task-v1/blob/main/images/api%20health.png)
+   - ![api/health](https://github.com/Zunaied/Devops-task-v1/blob/main/images/api%20health.png)
 
 The application runs on port 5500.
 
