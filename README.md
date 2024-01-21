@@ -4,16 +4,11 @@
 ## API Creation using OpenWeather API
 This application, implemented in [app.py](./app.py), collects data from the OpenWeather API using an API key and provides responses to the following endpoints:
 
-- `/api/hello`: Returns data from OpenWeather.
-- `/api/health`: Health check API endpoint.
+## Endpoints
+   - `/api/hello`: Returns data from OpenWeather.
+   - `/api/health`: Health check API endpoint.
 
 The application runs on port 5500.
-
-
-## Endpoints
-
-- `/api/hello`: Description of this endpoint.
-- `/health`: Description of health check endpoint.
 
 ## Containerize the application using docker
 The application has been containerized using Docker. The Dockerfile used for containerization can be found at [Dockerfile](./Dockerfile). The Dockerfile is based on the `python:3.9-slim` image. It copies all the necessary files into the container and installs the required dependency packages.
