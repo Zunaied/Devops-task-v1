@@ -14,7 +14,7 @@ This application, implemented in [app.py](./app.py), collects data from the Open
    - `/api/health`: Health check API endpoint.
    - ![api/health](https://github.com/Zunaied/Devops-task-v1/blob/main/images/api%20health.png)
 
-The application runs on port 5500.
+
 
 ## Containerize the application using docker
 The application has been containerized using Docker. The Dockerfile used for containerization can be found at [Dockerfile](./Dockerfile). The Dockerfile is based on the `python:3.9-slim` image. It copies all the necessary files into the container and installs the required dependency packages.
